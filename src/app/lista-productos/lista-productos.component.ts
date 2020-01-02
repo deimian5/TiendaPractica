@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Productos } from '../model';
 
 @Component({
   selector: 'app-lista-productos',
@@ -6,9 +7,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lista-productos.component.css']
 })
 export class ListaProductosComponent implements OnInit {
-
-  productos:string[] = ["Uranio", "Plutonio", "Radon", "Nitrogeno", "Mercurio"]
-  constructor() { }
+  listaProducotos: Productos;
+  constructor() {
+    this.listaProducotos = [
+      {
+        id: 1,
+        nombre: 'Uranio',
+        descripcion: ''
+      },
+      {
+        id: 1,
+        nombre: 'Plutonio',
+        descripcion: ''
+      },
+      {
+        id: 1,
+        nombre: 'Radon',
+        descripcion: ''
+      },
+      {
+        id: 1,
+        nombre: 'Notrogeno',
+        descripcion: ''
+      }
+    ]
+  }
 
   ngOnInit() {
   }
