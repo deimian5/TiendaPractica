@@ -58,12 +58,22 @@ describe('ListaProductosComponent', () => {
   });
 
   it('deberia existir una propiedad llamada "listaProductos"',()=>{
-    component.listaProducotos = productosMock;
-    expect(component.listaProducotos).toBeTruthy();
+    component.listaProductos = productosMock;
+    expect(component.listaProductos).toBeTruthy();
   });
 
-  it('deberia haber tantas etiqutas "P" como "listaProductos"',()=>{
+  it('deberia haber un elemento "app-producto"',()=>{
     const productoComponent = fixture.debugElement.queryAll(By.css('app-producto'));
-    expect(productoComponent.length).toBe(component.listaProducotos.length);
+    expect(productoComponent).toBeTruthy();
+  });
+
+  it('deberia existir una propiedad llamada "listaProductos"', () => {
+    component.listaProductos = productosMock;
+    expect(component.listaProductos).toBeTruthy();
+  });
+
+  it('deberia haber tantos "Producto" como la variable "listaProducto"',()=>{
+    const productoComponent = fixture.debugElement.queryAll(By.css('app-producto'));
+    expect(productoComponent.length).toBe(component.listaProductos.length);
   });
 });

@@ -7,9 +7,9 @@ import { Productos } from '../model';
   styleUrls: ['./lista-productos.component.css']
 })
 export class ListaProductosComponent implements OnInit {
-  listaProducotos: Productos;
+  listaProductos: Productos;
   constructor() {
-    this.listaProducotos = [
+    this.listaProductos = [
       {
         id: 1,
         nombre: 'Uranio',

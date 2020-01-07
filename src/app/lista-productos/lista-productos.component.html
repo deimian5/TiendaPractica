@@ -1,5 +1,4 @@
 <h2>Productos</h2>
-
-<div *ngFor="let producto of productos">
-    <h3>{{ productos }}</h3>
+<div>
+    <app-producto *ngFor="let producto of listaProductos" [producto]="producto"></app-producto>
 </div>
